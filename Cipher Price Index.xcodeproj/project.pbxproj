@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		554416A7224EBC630095C1C1 /* CoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */; };
+		554416AA224FE9470095C1C1 /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554416A9224FE9470095C1C1 /* BitcoinPrice.swift */; };
+		554416AD22502E750095C1C1 /* BitCoinPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554416AC22502E750095C1C1 /* BitCoinPriceView.swift */; };
+		557BE1AC224EAC99008AA84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1AB224EAC99008AA84B /* AppDelegate.swift */; };
+		557BE1AE224EAC99008AA84B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1AD224EAC99008AA84B /* ViewController.swift */; };
+		557BE1B1224EAC99008AA84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557BE1AF224EAC99008AA84B /* Main.storyboard */; };
+		557BE1B3224EAC9B008AA84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557BE1B2224EAC9B008AA84B /* Assets.xcassets */; };
+		557BE1B6224EAC9B008AA84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557BE1B4224EAC9B008AA84B /* LaunchScreen.storyboard */; };
+		557BE1C1224EAC9C008AA84B /* Cipher_Price_IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1C0224EAC9C008AA84B /* Cipher_Price_IndexTests.swift */; };
+		557BE1CC224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */; };
+		6D1F8DF839FEA9C8B0E7B94F /* Pods_Cipher_Price_IndexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179D10A8885FBDACCBA4FA35 /* Pods_Cipher_Price_IndexUITests.framework */; };
+		9245DDDFC12ECBA5A158C73E /* Pods_Cipher_Price_IndexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6EC5E35C2C916231653950 /* Pods_Cipher_Price_IndexTests.framework */; };
+		984961BEA8439FC6260F42AE /* Pods_Cipher_Price_Index.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2B93F765D927F52867D3C8 /* Pods_Cipher_Price_Index.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		557BE1BD224EAC9C008AA84B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 557BE1A0224EAC99008AA84B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 557BE1A7224EAC99008AA84B;
+			remoteInfo = "Cipher Price Index";
+		};
+		557BE1C8224EAC9C008AA84B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 557BE1A0224EAC99008AA84B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 557BE1A7224EAC99008AA84B;
+			remoteInfo = "Cipher Price Index";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		179D10A8885FBDACCBA4FA35 /* Pods_Cipher_Price_IndexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Price_IndexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6EC5E35C2C916231653950 /* Pods_Cipher_Price_IndexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Price_IndexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FFDAEBD4463489208B3DC9 /* Pods-Cipher Price IndexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexTests.release.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexTests/Pods-Cipher Price IndexTests.release.xcconfig"; sourceTree = "<group>"; };
+		51330D2EAB0F69D69B339316 /* Pods-Cipher Price IndexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexUITests.release.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexUITests/Pods-Cipher Price IndexUITests.release.xcconfig"; sourceTree = "<group>"; };
+		554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskAPI.swift; sourceTree = "<group>"; };
+		554416A9224FE9470095C1C1 /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
+		554416AC22502E750095C1C1 /* BitCoinPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinPriceView.swift; sourceTree = "<group>"; };
+		557BE1A8224EAC99008AA84B /* Cipher Price Index.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Price Index.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		557BE1AB224EAC99008AA84B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		557BE1AD224EAC99008AA84B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		557BE1B0224EAC99008AA84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		557BE1B2224EAC9B008AA84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		557BE1B5224EAC9B008AA84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		557BE1B7224EAC9B008AA84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		557BE1BC224EAC9C008AA84B /* Cipher Price IndexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher Price IndexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		557BE1C0224EAC9C008AA84B /* Cipher_Price_IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_Price_IndexTests.swift; sourceTree = "<group>"; };
+		557BE1C2224EAC9C008AA84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		557BE1C7224EAC9C008AA84B /* Cipher Price IndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher Price IndexUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_Price_IndexUITests.swift; sourceTree = "<group>"; };
+		557BE1CD224EAC9C008AA84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593A32EEEFFE18E208D9BEFD /* Pods-Cipher Price IndexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexUITests/Pods-Cipher Price IndexUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DC816247D933D008CBB9E0B /* Pods-Cipher Price IndexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexTests.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexTests/Pods-Cipher Price IndexTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73A9504B5295A7BE5DDDBCCA /* Pods-Cipher Price Index.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price Index.release.xcconfig"; path = "Target Support Files/Pods-Cipher Price Index/Pods-Cipher Price Index.release.xcconfig"; sourceTree = "<group>"; };
+		7CDC19C85BC63BD841F6B700 /* Pods-Cipher Price Index.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price Index.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Price Index/Pods-Cipher Price Index.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2B93F765D927F52867D3C8 /* Pods_Cipher_Price_Index.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Price_Index.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		557BE1A5224EAC99008AA84B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984961BEA8439FC6260F42AE /* Pods_Cipher_Price_Index.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557BE1B9224EAC9C008AA84B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9245DDDFC12ECBA5A158C73E /* Pods_Cipher_Price_IndexTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557BE1C4224EAC9C008AA84B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1F8DF839FEA9C8B0E7B94F /* Pods_Cipher_Price_IndexUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		095AFBBCDE9CA6D5D96969CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B93F765D927F52867D3C8 /* Pods_Cipher_Price_Index.framework */,
+				1D6EC5E35C2C916231653950 /* Pods_Cipher_Price_IndexTests.framework */,
+				179D10A8885FBDACCBA4FA35 /* Pods_Cipher_Price_IndexUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		554416A8224FE8FB0095C1C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				554416A9224FE9470095C1C1 /* BitcoinPrice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		554416AB22502E4E0095C1C1 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				554416AC22502E750095C1C1 /* BitCoinPriceView.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		557BE19F224EAC99008AA84B = {
+			isa = PBXGroup;
+			children = (
+				557BE1AA224EAC99008AA84B /* Cipher Price Index */,
+				557BE1BF224EAC9C008AA84B /* Cipher Price IndexTests */,
+				557BE1CA224EAC9C008AA84B /* Cipher Price IndexUITests */,
+				557BE1A9224EAC99008AA84B /* Products */,
+				DBB7A3BE4A1AC50026469182 /* Pods */,
+				095AFBBCDE9CA6D5D96969CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		557BE1A9224EAC99008AA84B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				557BE1A8224EAC99008AA84B /* Cipher Price Index.app */,
+				557BE1BC224EAC9C008AA84B /* Cipher Price IndexTests.xctest */,
+				557BE1C7224EAC9C008AA84B /* Cipher Price IndexUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		557BE1AA224EAC99008AA84B /* Cipher Price Index */ = {
+			isa = PBXGroup;
+			children = (
+				557BE1AB224EAC99008AA84B /* AppDelegate.swift */,
+				554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */,
+				557BE1AD224EAC99008AA84B /* ViewController.swift */,
+				554416A8224FE8FB0095C1C1 /* Model */,
+				554416AB22502E4E0095C1C1 /* ModelView */,
+				557BE1AF224EAC99008AA84B /* Main.storyboard */,
+				557BE1B2224EAC9B008AA84B /* Assets.xcassets */,
+				557BE1B4224EAC9B008AA84B /* LaunchScreen.storyboard */,
+				557BE1B7224EAC9B008AA84B /* Info.plist */,
+			);
+			path = "Cipher Price Index";
+			sourceTree = "<group>";
+		};
+		557BE1BF224EAC9C008AA84B /* Cipher Price IndexTests */ = {
+			isa = PBXGroup;
+			children = (
+				557BE1C0224EAC9C008AA84B /* Cipher_Price_IndexTests.swift */,
+				557BE1C2224EAC9C008AA84B /* Info.plist */,
+			);
+			path = "Cipher Price IndexTests";
+			sourceTree = "<group>";
+		};
+		557BE1CA224EAC9C008AA84B /* Cipher Price IndexUITests */ = {
+			isa = PBXGroup;
+			children = (
+				557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */,
+				557BE1CD224EAC9C008AA84B /* Info.plist */,
+			);
+			path = "Cipher Price IndexUITests";
+			sourceTree = "<group>";
+		};
+		DBB7A3BE4A1AC50026469182 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CDC19C85BC63BD841F6B700 /* Pods-Cipher Price Index.debug.xcconfig */,
+				73A9504B5295A7BE5DDDBCCA /* Pods-Cipher Price Index.release.xcconfig */,
+				5DC816247D933D008CBB9E0B /* Pods-Cipher Price IndexTests.debug.xcconfig */,
+				28FFDAEBD4463489208B3DC9 /* Pods-Cipher Price IndexTests.release.xcconfig */,
+				593A32EEEFFE18E208D9BEFD /* Pods-Cipher Price IndexUITests.debug.xcconfig */,
+				51330D2EAB0F69D69B339316 /* Pods-Cipher Price IndexUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		557BE1A7224EAC99008AA84B /* Cipher Price Index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 557BE1D0224EAC9C008AA84B /* Build configuration list for PBXNativeTarget "Cipher Price Index" */;
+			buildPhases = (
+				A7119EC6F429491E18FD5D22 /* [CP] Check Pods Manifest.lock */,
+				557BE1A4224EAC99008AA84B /* Sources */,
+				557BE1A5224EAC99008AA84B /* Frameworks */,
+				557BE1A6224EAC99008AA84B /* Resources */,
+				12A67B3A7284635B3921CB2A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cipher Price Index";
+			productName = "Cipher Price Index";
+			productReference = 557BE1A8224EAC99008AA84B /* Cipher Price Index.app */;
+			productType = "com.apple.product-type.application";
+		};
+		557BE1BB224EAC9C008AA84B /* Cipher Price IndexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 557BE1D3224EAC9C008AA84B /* Build configuration list for PBXNativeTarget "Cipher Price IndexTests" */;
+			buildPhases = (
+				992CBF3E15A300751FB1BD2D /* [CP] Check Pods Manifest.lock */,
+				557BE1B8224EAC9C008AA84B /* Sources */,
+				557BE1B9224EAC9C008AA84B /* Frameworks */,
+				557BE1BA224EAC9C008AA84B /* Resources */,
+				0804ECBBD7B1DBA478C5490D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				557BE1BE224EAC9C008AA84B /* PBXTargetDependency */,
+			);
+			name = "Cipher Price IndexTests";
+			productName = "Cipher Price IndexTests";
+			productReference = 557BE1BC224EAC9C008AA84B /* Cipher Price IndexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		557BE1C6224EAC9C008AA84B /* Cipher Price IndexUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 557BE1D6224EAC9C008AA84B /* Build configuration list for PBXNativeTarget "Cipher Price IndexUITests" */;
+			buildPhases = (
+				73BFC1C91F204FF43F563934 /* [CP] Check Pods Manifest.lock */,
+				557BE1C3224EAC9C008AA84B /* Sources */,
+				557BE1C4224EAC9C008AA84B /* Frameworks */,
+				557BE1C5224EAC9C008AA84B /* Resources */,
+				0640EC92EAFE8972E3B7644A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				557BE1C9224EAC9C008AA84B /* PBXTargetDependency */,
+			);
+			name = "Cipher Price IndexUITests";
+			productName = "Cipher Price IndexUITests";
+			productReference = 557BE1C7224EAC9C008AA84B /* Cipher Price IndexUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		557BE1A0224EAC99008AA84B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Cipher Studio";
+				TargetAttributes = {
+					557BE1A7224EAC99008AA84B = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					557BE1BB224EAC9C008AA84B = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 557BE1A7224EAC99008AA84B;
+					};
+					557BE1C6224EAC9C008AA84B = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 557BE1A7224EAC99008AA84B;
+					};
+				};
+			};
+			buildConfigurationList = 557BE1A3224EAC99008AA84B /* Build configuration list for PBXProject "Cipher Price Index" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 557BE19F224EAC99008AA84B;
+			productRefGroup = 557BE1A9224EAC99008AA84B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				557BE1A7224EAC99008AA84B /* Cipher Price Index */,
+				557BE1BB224EAC9C008AA84B /* Cipher Price IndexTests */,
+				557BE1C6224EAC9C008AA84B /* Cipher Price IndexUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		557BE1A6224EAC99008AA84B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				557BE1B6224EAC9B008AA84B /* LaunchScreen.storyboard in Resources */,
+				557BE1B3224EAC9B008AA84B /* Assets.xcassets in Resources */,
+				557BE1B1224EAC99008AA84B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557BE1BA224EAC9C008AA84B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557BE1C5224EAC9C008AA84B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0640EC92EAFE8972E3B7644A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cipher Price IndexUITests/Pods-Cipher Price IndexUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cipher Price IndexUITests/Pods-Cipher Price IndexUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0804ECBBD7B1DBA478C5490D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cipher Price IndexTests/Pods-Cipher Price IndexTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cipher Price IndexTests/Pods-Cipher Price IndexTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12A67B3A7284635B3921CB2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cipher Price Index/Pods-Cipher Price Index-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cipher Price Index/Pods-Cipher Price Index-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73BFC1C91F204FF43F563934 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cipher Price IndexUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		992CBF3E15A300751FB1BD2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cipher Price IndexTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7119EC6F429491E18FD5D22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cipher Price Index-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		557BE1A4224EAC99008AA84B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554416AA224FE9470095C1C1 /* BitcoinPrice.swift in Sources */,
+				554416A7224EBC630095C1C1 /* CoinDeskAPI.swift in Sources */,
+				557BE1AE224EAC99008AA84B /* ViewController.swift in Sources */,
+				554416AD22502E750095C1C1 /* BitCoinPriceView.swift in Sources */,
+				557BE1AC224EAC99008AA84B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557BE1B8224EAC9C008AA84B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				557BE1C1224EAC9C008AA84B /* Cipher_Price_IndexTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557BE1C3224EAC9C008AA84B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				557BE1CC224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		557BE1BE224EAC9C008AA84B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 557BE1A7224EAC99008AA84B /* Cipher Price Index */;
+			targetProxy = 557BE1BD224EAC9C008AA84B /* PBXContainerItemProxy */;
+		};
+		557BE1C9224EAC9C008AA84B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 557BE1A7224EAC99008AA84B /* Cipher Price Index */;
+			targetProxy = 557BE1C8224EAC9C008AA84B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		557BE1AF224EAC99008AA84B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				557BE1B0224EAC99008AA84B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		557BE1B4224EAC9B008AA84B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				557BE1B5224EAC9B008AA84B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		557BE1CE224EAC9C008AA84B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		557BE1CF224EAC9C008AA84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		557BE1D1224EAC9C008AA84B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CDC19C85BC63BD841F6B700 /* Pods-Cipher Price Index.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB69CCJ6Z;
+				INFOPLIST_FILE = "Cipher Price Index/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.cipher.Cipher-Price-Index";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		557BE1D2224EAC9C008AA84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73A9504B5295A7BE5DDDBCCA /* Pods-Cipher Price Index.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB69CCJ6Z;
+				INFOPLIST_FILE = "Cipher Price Index/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.cipher.Cipher-Price-Index";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		557BE1D4224EAC9C008AA84B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC816247D933D008CBB9E0B /* Pods-Cipher Price IndexTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB69CCJ6Z;
+				INFOPLIST_FILE = "Cipher Price IndexTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.cipher.Cipher-Price-IndexTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cipher Price Index.app/Cipher Price Index";
+			};
+			name = Debug;
+		};
+		557BE1D5224EAC9C008AA84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28FFDAEBD4463489208B3DC9 /* Pods-Cipher Price IndexTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB69CCJ6Z;
+				INFOPLIST_FILE = "Cipher Price IndexTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.cipher.Cipher-Price-IndexTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cipher Price Index.app/Cipher Price Index";
+			};
+			name = Release;
+		};
+		557BE1D7224EAC9C008AA84B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593A32EEEFFE18E208D9BEFD /* Pods-Cipher Price IndexUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB69CCJ6Z;
+				INFOPLIST_FILE = "Cipher Price IndexUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.cipher.Cipher-Price-IndexUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cipher Price Index";
+			};
+			name = Debug;
+		};
+		557BE1D8224EAC9C008AA84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51330D2EAB0F69D69B339316 /* Pods-Cipher Price IndexUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MB69CCJ6Z;
+				INFOPLIST_FILE = "Cipher Price IndexUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.cipher.Cipher-Price-IndexUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cipher Price Index";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		557BE1A3224EAC99008AA84B /* Build configuration list for PBXProject "Cipher Price Index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				557BE1CE224EAC9C008AA84B /* Debug */,
+				557BE1CF224EAC9C008AA84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		557BE1D0224EAC9C008AA84B /* Build configuration list for PBXNativeTarget "Cipher Price Index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				557BE1D1224EAC9C008AA84B /* Debug */,
+				557BE1D2224EAC9C008AA84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		557BE1D3224EAC9C008AA84B /* Build configuration list for PBXNativeTarget "Cipher Price IndexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				557BE1D4224EAC9C008AA84B /* Debug */,
+				557BE1D5224EAC9C008AA84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		557BE1D6224EAC9C008AA84B /* Build configuration list for PBXNativeTarget "Cipher Price IndexUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				557BE1D7224EAC9C008AA84B /* Debug */,
+				557BE1D8224EAC9C008AA84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 557BE1A0224EAC99008AA84B /* Project object */;
+}
