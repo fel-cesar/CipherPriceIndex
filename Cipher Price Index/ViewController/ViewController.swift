@@ -13,11 +13,14 @@ import Charts
 class ViewController: UIViewController {
 
   @IBOutlet weak var mainBitcoinPriceLabel: UILabel!
-
   @IBOutlet weak var lineChart: LineChartView!
+  @IBOutlet weak var currencyButton: UIButton!
+  @IBOutlet weak var lineChartBackground: UIView!
+  @IBOutlet weak var mainValuebackgroundView: UIView!
+
   var lineChartEntry = [ChartDataEntry]()
 
-  //Dispose bag
+  // Dispose bag
   private let disposeBag = DisposeBag()
 
   private let apiErrorClosure: (Error) -> Void = { error in
@@ -33,81 +36,105 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    setupView()
+    setupInitialObservers()
+
+
     self.setupLineChart()
     // Do any additional setup after loading the view.
   }
 
   //MARK: IBActions
-  @IBAction func testButtonAction(_ sender: Any) {
+  @IBAction func currencyButtonAction(_ sender: Any) {
+    self.performSegue(withIdentifier: "toCurrencySelect", sender: self)
+  }
 
-    CoinDeskAPI.getSupportedCurrencies().observeOn(MainScheduler.instance)
-      .subscribe(onNext: { currency in
-        print(currency.country)
-      }, onError: apiErrorClosure )
-      .disposed(by: disposeBag)
+  private func setupInitialObservers() {
+
+    // Main label every time the currency is changed
+    UserDefaults.standard.rx
+      .observe(String.self, "SelectedCurrency")
+      .debounce(0.1, scheduler: MainScheduler.asyncInstance).subscribe(onNext: { (value) in
+        if let value = value {
+
+          CoinDeskAPI.getCurrentPrice(currency:value)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { currentRate in
+              self.mainBitcoinPriceLabel.text = currentRate.rate
+            }, onError: self.apiErrorClosure )
+            .disposed(by: self.disposeBag)
+
+          // Update main Graph
+          CoinDeskAPI.getHistorical(currency: value).observeOn(MainScheduler.instance)
+            .subscribe(onNext: { bitcoinPrices in
+
+              self.lineChartEntry.removeAll()
+              for (bitcoinPrice) in bitcoinPrices {
+                print("List of historical BPis:", bitcoinPrice.date.description, bitcoinPrice.rate)
+
+                let entry = ChartDataEntry.init(x: Double(self.lineChartEntry.count), y: bitcoinPrice.rate_float)
+                self.lineChartEntry.append(entry)
+
+                let line = LineChartDataSet(values: self.lineChartEntry, label: "Number")
+                line.colors = [NSUIColor.white]
+                line.drawCirclesEnabled = false;
+                line.lineWidth = 3
+                line.lineCapType = CGLineCap.round
+                line.valueTextColor = .clear
+
+                let data = LineChartData()
+                data.addDataSet(line)
+                self.lineChart.data = data
+              }
+
+            }, onError: self.apiErrorClosure)
+            .disposed(by: self.disposeBag)
+
+        }
+      }).disposed(by: disposeBag)
 
 
 
+  }
 
+  private func setupView() {
 
-    let endDate = Date()
+    // Creating Gradient Background
+    let gradient = CAGradientLayer(start: .topLeft, end: .bottomRight, colors: [
+      UIColor.init(red: 54.0/255.0, green: 55.0/255.0, blue: 87.0/255.0, alpha: 1.0).cgColor,
+      UIColor.init(red: 38.0/255.0, green: 38.0/255.0, blue: 67.0/255.0, alpha: 1.0).cgColor,
+      UIColor.init(red: 21.0/255.0, green: 22.0/255.0, blue: 46.0/255.0, alpha: 1.0).cgColor],
+                                   type: .axial)
+    gradient.frame = view.bounds
+    view.layer.insertSublayer(gradient, at: 0)
 
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy/MM/dd HH:mm"
-//    formatter.timeZone = TimeZone.init(abbreviation: "UTC")
-    let startDate = formatter.date(from: "2018/10/08 12:00")
-
-//      ChartDataEntry
-
-
-//    CoinDeskAPI.getHistorical(currency: "BRL", startDate: startDate, endDate: endDate).observeOn(MainScheduler.instance)
-//      .subscribe(onNext: { bitcoinPrices in
-//
-//        for (bitcoinPrice) in bitcoinPrices {
-//          print("List of historical BPis:", bitcoinPrice.date.description, bitcoinPrice.rate)
-//
-//          // Setting new Data
-//          let entry = ChartDataEntry.init(x: Double(self.lineChartEntry.count), y: bitcoinPrice.rate_float)
-//          self.lineChartEntry.append(entry)
-//
-//          let line1 = LineChartDataSet(values: self.lineChartEntry, label: "Number")
-//          line1.colors = [NSUIColor.blue]
-//          line1.drawCirclesEnabled = false;
-//
-//          let data = LineChartData()
-//          data.addDataSet(line1)
-//
-//          self.lineChart.data = data
-//        }
-//
-//      }, onError: apiErrorClosure )
-//      .disposed(by: disposeBag)
-
-
-    CoinDeskAPI.getCurrentPrice(currency:"BRL")
-    .observeOn(MainScheduler.instance)
-    .subscribe(onNext: { currentRate in
-      print("List of posts:", currentRate.date)
-      self.mainBitcoinPriceLabel.text = currentRate.rate
-    }, onError: { error in
-      switch error {
-      case ApiError.forbidden:
-        print("Forbidden error")
-      case ApiError.notFound:
-        print("Not found error")
-      default:
-        print("Unknown error:", error)
-      }
-    })
-      .disposed(by: disposeBag)
+    // Creating gradient background for main value
+    let gradientSmall = CAGradientLayer(start: .topLeft, end: .bottomRight, colors: [
+      UIColor.init(red: 104.0/255.0, green: 49.0/255.0, blue: 231.0/255.0, alpha: 1.0).cgColor,
+      UIColor.init(red: 119.0/255.0, green: 80.0/255.0, blue: 231.0/255.0, alpha: 1.0).cgColor,
+      UIColor.init(red: 154.0/255.0, green: 119.0/255.0, blue: 232.0/255.0, alpha: 1.0).cgColor],
+                                   type: .axial)
+    gradientSmall.frame = self.mainValuebackgroundView.bounds
+    self.mainValuebackgroundView.layer.insertSublayer(gradientSmall, at: 0)
+    self.mainValuebackgroundView.layer.cornerRadius = 30;
+    self.mainValuebackgroundView.layer.masksToBounds = true;
   }
 
   private func setupLineChart() {
 
-    self.lineChart.layer.cornerRadius = 30;
-    self.lineChart.layer.masksToBounds = true;
+    let gradient = CAGradientLayer(start: .topLeft, end: .bottomRight, colors: [
+      UIColor.init(red: 104.0/255.0, green: 49.0/255.0, blue: 231.0/255.0, alpha: 1.0).cgColor,
+      UIColor.init(red: 119.0/255.0, green: 80.0/255.0, blue: 231.0/255.0, alpha: 1.0).cgColor,
+      UIColor.init(red: 154.0/255.0, green: 119.0/255.0, blue: 232.0/255.0, alpha: 1.0).cgColor],
+                                   type: .axial)
+    gradient.frame = self.lineChartBackground.bounds
+    self.lineChartBackground.layer.insertSublayer(gradient, at: 0)
+    self.lineChartBackground.layer.cornerRadius = 30;
+    self.lineChartBackground.layer.masksToBounds = true;
 
-    self.lineChart.backgroundColor = NSUIColor.lightGray
+
+    self.lineChart.backgroundColor = NSUIColor.clear
     self.lineChart.drawGridBackgroundEnabled = false
     self.lineChart.drawBordersEnabled = false
     self.lineChart.legend.enabled = false
