@@ -6,8 +6,14 @@
 //  Copyright © 2019 Cipher Studio. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Currency: NSObject {
+class Currency {
+  let code: String
+  let country: String
 
+  init(code: String, country: String) {
+    self.code = code
+    self.country = country
+  }
 }

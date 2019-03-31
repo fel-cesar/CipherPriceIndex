@@ -27,6 +27,29 @@ class CoinDeskAPI {
 
   //The API's base URL
   static let baseUrl = "https://api.coindesk.com/v1/bpi"
+
+  class func getSupportedCurrencies() -> Observable<Currency> {
+    let url = "\(baseUrl)/supported-currencies.json"
+    return CoinDeskAPI.getRequest(url: url) { (observer, response) in
+      guard let data = response.data else {
+        observer.onError(ApiError.badResponse)
+        return
+      }
+      do {
+        let json = try JSON(data: data)
+        for (_, subJson):(String, JSON) in json {
+          guard let code = subJson["currency"].string, let country = subJson["country"].string else {
+            throw ApiError.badResponse
+          }
+          observer.onNext(Currency.init(code: code, country: country))
+        }
+        observer.onCompleted()
+      } catch {
+        observer.onError(error)
+      }
+    }
+  }
+
   class func getHistorical(currency:String, startDate: Date? = nil, endDate: Date? = nil) -> Observable<[BitcoinPrice]> {
     var url = "\(baseUrl)/historical/close.json?currency=\(currency)"
 
