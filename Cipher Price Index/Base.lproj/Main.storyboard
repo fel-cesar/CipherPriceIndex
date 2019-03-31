@@ -42,6 +42,9 @@
                                 <rect key="frame" x="30" y="388" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Currency"/>
+                                <connections>
+                                    <action selector="currencyButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfO-Lr-65Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +54,7 @@
                     <connections>
                         <outlet property="lineChart" destination="PUJ-GL-dsd" id="RGH-oq-Pmb"/>
                         <outlet property="mainBitcoinPriceLabel" destination="3pA-w4-E9r" id="lT4-Nw-rkP"/>
-                        <segue destination="jzg-8l-2X4" kind="presentation" id="1Ae-9Z-fOS"/>
+                        <segue destination="jzg-8l-2X4" kind="presentation" identifier="toCurrencySelect" id="1Ae-9Z-fOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,14 +84,50 @@
                     <view key="view" contentMode="scaleToFill" id="VwW-dr-WIH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-rO-TWp">
+                                <rect key="frame" x="0.0" y="179" width="414" height="634"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyEntryCell" id="Gll-7j-Ic2">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gll-7j-Ic2" id="kMv-y2-LRg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="START DATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K35-p5-0fk">
+                                <rect key="frame" x="20" y="107" width="161" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="END DATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0z-2B-zwh">
+                                <rect key="frame" x="218" y="107" width="161" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sqq-1s-R3I"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="rjg-cK-GpN"/>
+                    <connections>
+                        <outlet property="endDateTextField" destination="o0z-2B-zwh" id="W0N-pw-sSe"/>
+                        <outlet property="startDateTextField" destination="K35-p5-0fk" id="rCj-P0-UPG"/>
+                        <outlet property="tableView" destination="UC5-rO-TWp" id="0Gp-1T-w35"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="240-0P-UoV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="-602"/>
+            <point key="canvasLocation" x="1500.0000000000002" y="-602.00892857142856"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="mGf-sT-0hH">
@@ -109,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="400" y="100"/>
         </scene>
-        <!--View Controller-->
+        <!--Currency View Controller-->
         <scene sceneID="Yom-Dx-ZZh">
             <objects>
-                <viewController id="jzg-8l-2X4" sceneMemberID="viewController">
+                <viewController id="jzg-8l-2X4" customClass="CurrencyViewController" customModule="Cipher_Price_Index" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Je3-c4-WTz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +166,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Fyk-gz-cR2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityPrototypeCell" id="Fyk-gz-cR2">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fyk-gz-cR2" id="iVT-P3-ZMx">
@@ -141,6 +180,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YLT-7a-S1E"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="10V-Ab-RNb" id="2I4-9j-mLk"/>
+                        <outlet property="tableView" destination="In7-6x-59e" id="Glm-Jk-Rsn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvP-3O-f6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
