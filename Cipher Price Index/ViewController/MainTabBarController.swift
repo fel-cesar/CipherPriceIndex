@@ -9,5 +9,14 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
+    self.tabBar.layer.masksToBounds = true
+    self.tabBar.isTranslucent = true
+    self.tabBar.layer.cornerRadius = 20
+    self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    self.tabBar.backgroundColor = UIColor.white
+    UITabBar.appearance().tintColor = UIColor.darkGray
+  }
 }
