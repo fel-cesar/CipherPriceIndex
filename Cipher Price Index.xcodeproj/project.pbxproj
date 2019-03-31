@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550EB48B2250A0010041B89F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550EB48A2250A0010041B89F /* Currency.swift */; };
+		550EB48D2250A0550041B89F /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550EB48C2250A0550041B89F /* CurrencyView.swift */; };
 		554416A7224EBC630095C1C1 /* CoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */; };
 		554416AA224FE9470095C1C1 /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554416A9224FE9470095C1C1 /* BitcoinPrice.swift */; };
 		554416AD22502E750095C1C1 /* BitCoinPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554416AC22502E750095C1C1 /* BitCoinPriceView.swift */; };
@@ -44,6 +46,8 @@
 		1D6EC5E35C2C916231653950 /* Pods_Cipher_Price_IndexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Price_IndexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FFDAEBD4463489208B3DC9 /* Pods-Cipher Price IndexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexTests.release.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexTests/Pods-Cipher Price IndexTests.release.xcconfig"; sourceTree = "<group>"; };
 		51330D2EAB0F69D69B339316 /* Pods-Cipher Price IndexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexUITests.release.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexUITests/Pods-Cipher Price IndexUITests.release.xcconfig"; sourceTree = "<group>"; };
+		550EB48A2250A0010041B89F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		550EB48C2250A0550041B89F /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
 		554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskAPI.swift; sourceTree = "<group>"; };
 		554416A9224FE9470095C1C1 /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
 		554416AC22502E750095C1C1 /* BitCoinPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinPriceView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				554416A9224FE9470095C1C1 /* BitcoinPrice.swift */,
+				550EB48A2250A0010041B89F /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				554416AC22502E750095C1C1 /* BitCoinPriceView.swift */,
+				550EB48C2250A0550041B89F /* CurrencyView.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -484,9 +490,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550EB48B2250A0010041B89F /* Currency.swift in Sources */,
 				554416AA224FE9470095C1C1 /* BitcoinPrice.swift in Sources */,
 				554416A7224EBC630095C1C1 /* CoinDeskAPI.swift in Sources */,
 				557BE1AE224EAC99008AA84B /* ViewController.swift in Sources */,
+				550EB48D2250A0550041B89F /* CurrencyView.swift in Sources */,
 				554416AD22502E750095C1C1 /* BitCoinPriceView.swift in Sources */,
 				557BE1AC224EAC99008AA84B /* AppDelegate.swift in Sources */,
 			);
