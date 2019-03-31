@@ -148,6 +148,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 50.0
   }
+
   // MARK: Helper functions
 
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -157,7 +158,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   private func setupView() {
 
     // Disabling tableView backgrounds
-    
     let desiredColor = UIColor.clear;
     self.tableView.backgroundColor = desiredColor;
     self.tableView.backgroundView?.backgroundColor = desiredColor;

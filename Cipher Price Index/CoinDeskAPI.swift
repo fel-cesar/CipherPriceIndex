@@ -108,7 +108,6 @@ class CoinDeskAPI {
       } catch {
         observer.onError(error)
       }
-
     } as Observable<[BitcoinPrice]>
   }
 
@@ -144,10 +143,8 @@ class CoinDeskAPI {
           observer.onError(error)
         }
       }
-
     })
   }
-
 
   class func getRequest<T>(url: URLConvertible, success: @escaping (_ observer: AnyObserver<T>,_ response:DataResponse<Any>) -> () ) ->Observable<T> {
 
@@ -172,13 +169,10 @@ class CoinDeskAPI {
           }
         }
       }
-
       //Finally, we return a disposable to stop the request
       return Disposables.create {
         request.cancel()
       }
     }
   }
-
-
 }

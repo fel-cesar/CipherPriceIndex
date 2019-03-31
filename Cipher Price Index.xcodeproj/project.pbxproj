@@ -126,6 +126,7 @@
 		550EB48E2250ABF20041B89F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5583231322515AE600D3A031 /* TableViewCell */,
 				557BE1AD224EAC99008AA84B /* ViewController.swift */,
 				550EB48F2250AC360041B89F /* MainTabBarController.swift */,
 				550EB4912250ADFF0041B89F /* HistoryViewController.swift */,
@@ -179,10 +180,7 @@
 			children = (
 				557BE1AB224EAC99008AA84B /* AppDelegate.swift */,
 				554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */,
-				55254E4D22510BD600CBEFFD /* GradientHelper.swift */,
-				559DD33A22513F5C00A2D483 /* UIViewHelper.swift */,
-				559DD3382251349F00A2D483 /* CustomTableViewCell.swift */,
-				559DD33C22514B4E00A2D483 /* CurrencyTableViewCell.swift */,
+				5583231222515ABD00D3A031 /* Extensions */,
 				554416A8224FE8FB0095C1C1 /* Model */,
 				554416AB22502E4E0095C1C1 /* ModelView */,
 				550EB48E2250ABF20041B89F /* ViewController */,
@@ -210,6 +208,24 @@
 				557BE1CD224EAC9C008AA84B /* Info.plist */,
 			);
 			path = "Cipher Price IndexUITests";
+			sourceTree = "<group>";
+		};
+		5583231222515ABD00D3A031 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55254E4D22510BD600CBEFFD /* GradientHelper.swift */,
+				559DD33A22513F5C00A2D483 /* UIViewHelper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5583231322515AE600D3A031 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				559DD3382251349F00A2D483 /* CustomTableViewCell.swift */,
+				559DD33C22514B4E00A2D483 /* CurrencyTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		DBB7A3BE4A1AC50026469182 /* Pods */ = {

@@ -86,7 +86,6 @@ class CurrencyViewController: UIViewController, UITableViewDataSource, UITableVi
     return 60.0
   }
 
-
   // MARK: Helper methods
 
   override var preferredStatusBarStyle: UIStatusBarStyle {

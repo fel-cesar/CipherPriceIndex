@@ -25,14 +25,7 @@ class ViewController: UIViewController {
   private let disposeBag = DisposeBag()
 
   private let apiErrorClosure: (Error) -> Void = { error in
-    switch error {
-    case ApiError.forbidden:
-      print("Forbidden error")
-    case ApiError.notFound:
-      print("Not found error")
-    default:
-      print("Unknown error:", error)
-    }
+    print(error)
   }
 
   override func viewDidLoad() {
@@ -41,9 +34,7 @@ class ViewController: UIViewController {
     setupView()
     setupInitialObservers()
 
-
     self.setupLineChart()
-    // Do any additional setup after loading the view.
   }
 
   // MARK: IBActions
@@ -78,7 +69,6 @@ class ViewController: UIViewController {
 
               self.lineChartEntry.removeAll()
               for (bitcoinPrice) in bitcoinPrices {
-                print("List of historical BPis:", bitcoinPrice.date.description, bitcoinPrice.rate)
 
                 let entry = ChartDataEntry.init(x: Double(self.lineChartEntry.count), y: bitcoinPrice.rate_float)
                 self.lineChartEntry.append(entry)
