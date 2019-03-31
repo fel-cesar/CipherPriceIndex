@@ -138,12 +138,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "historyEntryCell", for: indexPath) as! CustomTableViewCell
 
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd-MM-yyyy"
-    let displayDate = dateFormatter.string(from: self.historyEntries[indexPath.row].date)
-    cell.dateLabel.text = "\(displayDate)"
-
-    cell.valueLabel.text = "\(selectedCurrency) \(historyEntries[indexPath.row].rate)"
+    let bitcoinPriceView = BitcoinPriceView.init(bitcoinPrice: self.historyEntries[indexPath.row])
+    cell.dateLabel.text = "\(bitcoinPriceView.dateText)"
+    cell.valueLabel.text = "\(selectedCurrency) \(bitcoinPriceView.valueText)"
 
     return cell
   }
