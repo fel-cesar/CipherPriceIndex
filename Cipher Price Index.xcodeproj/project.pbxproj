@@ -24,6 +24,7 @@
 		557BE1C1224EAC9C008AA84B /* Cipher_Price_IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1C0224EAC9C008AA84B /* Cipher_Price_IndexTests.swift */; };
 		557BE1CC224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */; };
 		559DD3392251349F00A2D483 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DD3382251349F00A2D483 /* CustomTableViewCell.swift */; };
+		559DD33B22513F5C00A2D483 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DD33A22513F5C00A2D483 /* UIViewHelper.swift */; };
 		6D1F8DF839FEA9C8B0E7B94F /* Pods_Cipher_Price_IndexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179D10A8885FBDACCBA4FA35 /* Pods_Cipher_Price_IndexUITests.framework */; };
 		9245DDDFC12ECBA5A158C73E /* Pods_Cipher_Price_IndexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6EC5E35C2C916231653950 /* Pods_Cipher_Price_IndexTests.framework */; };
 		984961BEA8439FC6260F42AE /* Pods_Cipher_Price_Index.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2B93F765D927F52867D3C8 /* Pods_Cipher_Price_Index.framework */; };
@@ -74,6 +75,7 @@
 		557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_Price_IndexUITests.swift; sourceTree = "<group>"; };
 		557BE1CD224EAC9C008AA84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		559DD3382251349F00A2D483 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		559DD33A22513F5C00A2D483 /* UIViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 		593A32EEEFFE18E208D9BEFD /* Pods-Cipher Price IndexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexUITests/Pods-Cipher Price IndexUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DC816247D933D008CBB9E0B /* Pods-Cipher Price IndexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price IndexTests.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Price IndexTests/Pods-Cipher Price IndexTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73A9504B5295A7BE5DDDBCCA /* Pods-Cipher Price Index.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Price Index.release.xcconfig"; path = "Target Support Files/Pods-Cipher Price Index/Pods-Cipher Price Index.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				557BE1AB224EAC99008AA84B /* AppDelegate.swift */,
 				554416A6224EBC630095C1C1 /* CoinDeskAPI.swift */,
 				55254E4D22510BD600CBEFFD /* GradientHelper.swift */,
+				559DD33A22513F5C00A2D483 /* UIViewHelper.swift */,
 				559DD3382251349F00A2D483 /* CustomTableViewCell.swift */,
 				554416A8224FE8FB0095C1C1 /* Model */,
 				554416AB22502E4E0095C1C1 /* ModelView */,
@@ -523,6 +526,7 @@
 				550EB48D2250A0550041B89F /* CurrencyView.swift in Sources */,
 				550EB4922250ADFF0041B89F /* HistoryViewController.swift in Sources */,
 				554416AD22502E750095C1C1 /* BitCoinPriceView.swift in Sources */,
+				559DD33B22513F5C00A2D483 /* UIViewHelper.swift in Sources */,
 				557BE1AC224EAC99008AA84B /* AppDelegate.swift in Sources */,
 				550EB4942250AFC60041B89F /* CurrencyViewController.swift in Sources */,
 			);

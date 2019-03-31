@@ -65,17 +65,17 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FT-re-F4n">
-                                        <rect key="frame" x="168.5" y="19" width="37" height="24"/>
+                                        <rect key="frame" x="157" y="19" width="60" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Td9-X7-mIq"/>
-                                            <constraint firstAttribute="width" constant="37" id="qZJ-CE-gdo"/>
+                                            <constraint firstAttribute="width" constant="60" id="qZJ-CE-gdo"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="USD">
                                                 <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="20" name="AppleSDGothicNeo-SemiBold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -111,6 +111,7 @@
                     <tabBarItem key="tabBarItem" title="Price" id="7Gj-iv-ElQ"/>
                     <connections>
                         <outlet property="currencyButton" destination="5GX-3F-CNo" id="Od8-aD-56w"/>
+                        <outlet property="currencyLabel" destination="7FT-re-F4n" id="DGy-IZ-lli"/>
                         <outlet property="lineChart" destination="PUJ-GL-dsd" id="RGH-oq-Pmb"/>
                         <outlet property="lineChartBackground" destination="B3B-9p-MsH" id="rKS-Xn-Pfp"/>
                         <outlet property="mainBitcoinPriceLabel" destination="3pA-w4-E9r" id="lT4-Nw-rkP"/>
@@ -130,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-rO-TWp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-rO-TWp">
                                 <rect key="frame" x="0.0" y="199" width="414" height="614"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -168,7 +169,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqm-ow-vZ0">
                                 <rect key="frame" x="20" y="74" width="374" height="96"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="END DATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0z-2B-zwh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="START DATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0z-2B-zwh">
                                         <rect key="frame" x="8" y="33" width="161" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="161" id="NF1-PG-dzm"/>
@@ -178,7 +179,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="START DATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K35-p5-0fk">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="END DATE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K35-p5-0fk">
                                         <rect key="frame" x="205" y="33" width="161" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="bhg-ip-X4D"/>
@@ -206,7 +207,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.72156862749999995" green="0.1215686275" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UC5-rO-TWp" firstAttribute="bottom" secondItem="sqq-1s-R3I" secondAttribute="bottom" id="9GA-JH-mHK"/>
                             <constraint firstItem="sqq-1s-R3I" firstAttribute="trailing" secondItem="Wqm-ow-vZ0" secondAttribute="trailing" constant="20" id="Nqm-cY-iI1"/>

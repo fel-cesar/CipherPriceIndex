@@ -17,6 +17,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var currencyButton: UIButton!
   @IBOutlet weak var lineChartBackground: UIView!
   @IBOutlet weak var mainValuebackgroundView: UIView!
+  @IBOutlet weak var currencyLabel: UILabel!
 
   var lineChartEntry = [ChartDataEntry]()
 
@@ -57,10 +58,11 @@ class ViewController: UIViewController {
       .observe(String.self, "SelectedCurrency")
       .debounce(0.1, scheduler: MainScheduler.asyncInstance).subscribe(onNext: { (value) in
         if let value = value {
-
+          self.currencyLabel.text = value
           CoinDeskAPI.getCurrentPrice(currency:value)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { currentRate in
+              self.mainBitcoinPriceLabel.fadeTransition(0.5)
               self.mainBitcoinPriceLabel.text = currentRate.rate
             }, onError: self.apiErrorClosure )
             .disposed(by: self.disposeBag)
