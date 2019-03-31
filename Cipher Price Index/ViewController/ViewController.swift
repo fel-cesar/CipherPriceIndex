@@ -46,9 +46,14 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
 
-  //MARK: IBActions
+  // MARK: IBActions
   @IBAction func currencyButtonAction(_ sender: Any) {
     self.performSegue(withIdentifier: "toCurrencySelect", sender: self)
+  }
+
+  // MARK: Helper Methods
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
   }
 
   private func setupInitialObservers() {

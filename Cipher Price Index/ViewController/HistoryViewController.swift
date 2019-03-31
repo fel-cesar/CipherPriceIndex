@@ -28,12 +28,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     tableView.dataSource = self
     tableView.delegate = self
     tableView.keyboardDismissMode = .onDrag
-    // Set automatic dimensions for row height
-    tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = UITableView.automaticDimension
-    let desiredColor = UIColor.clear;
-    self.tableView.backgroundColor = desiredColor;
-    self.tableView.backgroundView?.backgroundColor = desiredColor;
 
     setupView()
     initDatePicker()
@@ -88,7 +82,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     }
 
-  //MARK: UIDatePicker
+  // MARK: UIDatePicker
 
   func initDatePicker() {
     //Formate Date
@@ -135,7 +129,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     self.view.endEditing(true)
   }
 
-  //MARK: UITableView DataSource
+  // MARK: UITableView DataSource
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return historyEntries.count
@@ -144,7 +138,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "historyEntryCell", for: indexPath) as! CustomTableViewCell
 
-//    let dateString = sourceString
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "dd-MM-yyyy"
     let displayDate = dateFormatter.string(from: self.historyEntries[indexPath.row].date)
@@ -156,10 +149,22 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 50.0 //UITableView.automaticDimension
+    return 50.0
   }
   // MARK: Helper functions
+
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+
   private func setupView() {
+
+    // Disabling tableView backgrounds
+    
+    let desiredColor = UIColor.clear;
+    self.tableView.backgroundColor = desiredColor;
+    self.tableView.backgroundView?.backgroundColor = desiredColor;
+
     // Creating Gradient Background
     let gradient = GradientPreset.darkBackground.gradient
     gradient.frame = view.bounds
@@ -174,12 +179,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   }
 
   private func dateFromString(sourceString:String, fromFormat:String = "dd/MM/yyyy") -> Date {
-
     let dateString = sourceString
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = fromFormat
-
-    return dateFormatter.date(from: dateString)! // Date object
+    return dateFormatter.date(from: dateString)!
   }
-
 }
