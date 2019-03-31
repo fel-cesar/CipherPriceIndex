@@ -161,25 +161,16 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   // MARK: Helper functions
   private func setupView() {
     // Creating Gradient Background
-    let gradient = CAGradientLayer(start: .topLeft, end: .bottomRight, colors: [
-      UIColor.init(red: 54.0/255.0, green: 55.0/255.0, blue: 87.0/255.0, alpha: 1.0).cgColor,
-      UIColor.init(red: 38.0/255.0, green: 38.0/255.0, blue: 67.0/255.0, alpha: 1.0).cgColor,
-      UIColor.init(red: 21.0/255.0, green: 22.0/255.0, blue: 46.0/255.0, alpha: 1.0).cgColor],
-                                   type: .axial)
+    let gradient = GradientPreset.darkBackground.gradient
     gradient.frame = view.bounds
     view.layer.insertSublayer(gradient, at: 0)
 
     // Creating gradient background for main value
-    let gradientSmall = CAGradientLayer(start: .topLeft, end: .bottomRight, colors: [
-      UIColor.init(red: 104.0/255.0, green: 49.0/255.0, blue: 231.0/255.0, alpha: 1.0).cgColor,
-      UIColor.init(red: 119.0/255.0, green: 80.0/255.0, blue: 231.0/255.0, alpha: 1.0).cgColor,
-      UIColor.init(red: 154.0/255.0, green: 119.0/255.0, blue: 232.0/255.0, alpha: 1.0).cgColor],
-                                        type: .axial)
+    let gradientSmall = GradientPreset.lavander.gradient
     gradientSmall.frame = self.datePickerBackgroundView.bounds
     self.datePickerBackgroundView.layer.insertSublayer(gradientSmall, at: 0)
     self.datePickerBackgroundView.layer.cornerRadius = 30;
     self.datePickerBackgroundView.layer.masksToBounds = true;
-
   }
 
   private func dateFromString(sourceString:String, fromFormat:String = "dd/MM/yyyy") -> Date {
@@ -189,10 +180,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     dateFormatter.dateFormat = fromFormat
 
     return dateFormatter.date(from: dateString)! // Date object
-
-//    dateFormatter.dateFormat = toFormat
-//    return dateFormatter.string(from: dateObj!)
-
   }
 
 }
