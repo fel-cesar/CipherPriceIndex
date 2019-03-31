@@ -27,7 +27,7 @@ class CurrencyViewController: UIViewController, UITableViewDataSource, UITableVi
     tableView.dataSource = self
     tableView.delegate = self
     tableView.keyboardDismissMode = .onDrag
-
+    setupView()
     let apiErrorClosure: (Error) -> Void = { error in
       switch error {
       case ApiError.forbidden:
@@ -67,8 +67,11 @@ class CurrencyViewController: UIViewController, UITableViewDataSource, UITableVi
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cityPrototypeCell", for: indexPath)
-    cell.textLabel?.text = "\(self.currenciesDisplay[indexPath.row].country)"
+
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cityPrototypeCell", for: indexPath) as! CurrencyTableViewCell
+    cell.codeLabel.text = "\(self.currenciesDisplay[indexPath.row].code)"
+    cell.countryLabel.text = "\(self.currenciesDisplay[indexPath.row].country)"
+
     return cell
   }
 
@@ -78,14 +81,33 @@ class CurrencyViewController: UIViewController, UITableViewDataSource, UITableVi
     UserDefaults.standard.set(self.currenciesDisplay[indexPath.row].code, forKey: "SelectedCurrency")
     self.dismiss(animated: true, completion: nil)
   }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 60.0
+  }
 
+
+  // MARK: Helper methods
+
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+
+  private func setupView() {
+    let desiredColor = UIColor.clear;
+    self.tableView.backgroundColor = desiredColor;
+    self.tableView.backgroundView?.backgroundColor = desiredColor;
+
+    // Creating Gradient Background
+    let gradient = GradientPreset.darkBackground.gradient
+    gradient.frame = view.bounds
+    view.layer.insertSublayer(gradient, at: 0)
+
+    navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissViewController))
+
+  }
+
+  @objc func dismissViewController(){
+    self.dismiss(animated: true)
+  }
 }
