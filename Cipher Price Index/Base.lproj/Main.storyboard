@@ -108,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Price" id="7Gj-iv-ElQ"/>
+                    <tabBarItem key="tabBarItem" title="Price" image="bars" landscapeImage="calendar" id="7Gj-iv-ElQ"/>
                     <connections>
                         <outlet property="currencyButton" destination="5GX-3F-CNo" id="Od8-aD-56w"/>
                         <outlet property="currencyLabel" destination="7FT-re-F4n" id="DGy-IZ-lli"/>
@@ -123,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="1500.0000000000002" y="112.5"/>
         </scene>
-        <!--Item 1-->
+        <!--History-->
         <scene sceneID="o9Z-yi-Ufw">
             <objects>
                 <viewController id="kh4-dv-196" customClass="HistoryViewController" customModule="Cipher_Price_Index" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sqq-1s-R3I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rjg-cK-GpN"/>
+                    <tabBarItem key="tabBarItem" title="History" image="calendar" id="rjg-cK-GpN"/>
                     <connections>
                         <outlet property="datePickerBackgroundView" destination="Wqm-ow-vZ0" id="XbY-1r-cuh"/>
                         <outlet property="endDateTextField" destination="o0z-2B-zwh" id="W0N-pw-sSe"/>
@@ -239,6 +239,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.18041417000000001" green="0.18068397050000001" blue="0.1640010774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="kh4-dv-196" kind="relationship" relationship="viewControllers" id="nuy-IG-Igr"/>
@@ -324,15 +326,23 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yef-43-NPY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.18041417002677917" green="0.18068397045135498" blue="0.16400107741355896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="In7-6x-59e" firstAttribute="top" secondItem="10V-Ab-RNb" secondAttribute="bottom" id="2K3-35-QJI"/>
                             <constraint firstItem="10V-Ab-RNb" firstAttribute="top" secondItem="YLT-7a-S1E" secondAttribute="top" id="2oh-Bb-H6z"/>
                             <constraint firstAttribute="bottom" secondItem="In7-6x-59e" secondAttribute="bottom" id="4W7-wr-yeZ"/>
+                            <constraint firstItem="yef-43-NPY" firstAttribute="leading" secondItem="Je3-c4-WTz" secondAttribute="leading" id="5wQ-HD-qXl"/>
                             <constraint firstItem="In7-6x-59e" firstAttribute="leading" secondItem="YLT-7a-S1E" secondAttribute="leading" id="F2k-iZ-7P7"/>
                             <constraint firstItem="10V-Ab-RNb" firstAttribute="trailing" secondItem="YLT-7a-S1E" secondAttribute="trailing" id="H3F-Im-JlH"/>
+                            <constraint firstAttribute="trailing" secondItem="yef-43-NPY" secondAttribute="trailing" id="R10-Gc-nWW"/>
                             <constraint firstItem="In7-6x-59e" firstAttribute="trailing" secondItem="YLT-7a-S1E" secondAttribute="trailing" id="ST7-zR-bIf"/>
+                            <constraint firstItem="10V-Ab-RNb" firstAttribute="top" secondItem="yef-43-NPY" secondAttribute="bottom" id="UAh-ta-Tir"/>
+                            <constraint firstItem="yef-43-NPY" firstAttribute="top" secondItem="Je3-c4-WTz" secondAttribute="top" id="gDr-5Q-2i0"/>
                             <constraint firstItem="10V-Ab-RNb" firstAttribute="leading" secondItem="YLT-7a-S1E" secondAttribute="leading" id="rub-bT-SAJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YLT-7a-S1E"/>
@@ -347,4 +357,8 @@
             <point key="canvasLocation" x="2373.913043478261" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bars" width="30" height="30"/>
+        <image name="calendar" width="30" height="30"/>
+    </resources>
 </document>

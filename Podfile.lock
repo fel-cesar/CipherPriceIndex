@@ -15,6 +15,7 @@ PODS:
     - RxAtomic (>= 4.4.2, ~> 4.4)
     - RxSwift (>= 4.4.2, ~> 4.4)
   - SwiftyJSON (4.2.0)
+  - SwipeableTabBarController (2.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.4.2)
   - RxTest (~> 4.4.2)
   - SwiftyJSON (~> 4.0)
+  - SwipeableTabBarController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -35,6 +37,7 @@ SPEC REPOS:
     - RxSwift
     - RxTest
     - SwiftyJSON
+    - SwipeableTabBarController
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -45,7 +48,8 @@ SPEC CHECKSUMS:
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   RxTest: 6433d5b6229f5de424fa534bc22b5e6c38b0b671
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwipeableTabBarController: e6445066473bb548cc74f660c0ebc04d609cde67
 
-PODFILE CHECKSUM: 4e834b7276441d569200db6458d27517604aff9c
+PODFILE CHECKSUM: eb9954b9cbc5dd8bb4798ff56c1e9348679c8643
 
 COCOAPODS: 1.6.1

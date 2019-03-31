@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeableTabBarController
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: SwipeableTabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
 

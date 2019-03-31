@@ -103,7 +103,6 @@ class CurrencyViewController: UIViewController, UITableViewDataSource, UITableVi
     view.layer.insertSublayer(gradient, at: 0)
 
     navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissViewController))
-
   }
 
   @objc func dismissViewController(){

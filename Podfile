@@ -13,6 +13,8 @@ target 'Cipher Price Index' do
   pod 'Alamofire', '~> 4.8.2'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Charts', '~> 3.2.2'
+  pod 'SwipeableTabBarController'
+
   # Pods for Cipher Price Index
   target 'Cipher Price IndexTests' do
     inherit! :search_paths

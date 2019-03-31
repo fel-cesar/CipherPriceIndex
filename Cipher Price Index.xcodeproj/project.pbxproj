@@ -23,6 +23,8 @@
 		557BE1B6224EAC9B008AA84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557BE1B4224EAC9B008AA84B /* LaunchScreen.storyboard */; };
 		557BE1C1224EAC9C008AA84B /* Cipher_Price_IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1C0224EAC9C008AA84B /* Cipher_Price_IndexTests.swift */; };
 		557BE1CC224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */; };
+		5583231522515F0A00D3A031 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5583231422515F0A00D3A031 /* calendar.png */; };
+		5583231722515F4500D3A031 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = 5583231622515F4400D3A031 /* bars.png */; };
 		559DD3392251349F00A2D483 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DD3382251349F00A2D483 /* CustomTableViewCell.swift */; };
 		559DD33B22513F5C00A2D483 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DD33A22513F5C00A2D483 /* UIViewHelper.swift */; };
 		559DD33D22514B4E00A2D483 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DD33C22514B4E00A2D483 /* CurrencyTableViewCell.swift */; };
@@ -75,6 +77,8 @@
 		557BE1C7224EAC9C008AA84B /* Cipher Price IndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipher Price IndexUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		557BE1CB224EAC9C008AA84B /* Cipher_Price_IndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher_Price_IndexUITests.swift; sourceTree = "<group>"; };
 		557BE1CD224EAC9C008AA84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5583231422515F0A00D3A031 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		5583231622515F4400D3A031 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
 		559DD3382251349F00A2D483 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		559DD33A22513F5C00A2D483 /* UIViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 		559DD33C22514B4E00A2D483 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
@@ -185,8 +189,9 @@
 				554416AB22502E4E0095C1C1 /* ModelView */,
 				550EB48E2250ABF20041B89F /* ViewController */,
 				557BE1AF224EAC99008AA84B /* Main.storyboard */,
-				557BE1B2224EAC9B008AA84B /* Assets.xcassets */,
 				557BE1B4224EAC9B008AA84B /* LaunchScreen.storyboard */,
+				5583231922515F8100D3A031 /* Images */,
+				557BE1B2224EAC9B008AA84B /* Assets.xcassets */,
 				557BE1B7224EAC9B008AA84B /* Info.plist */,
 			);
 			path = "Cipher Price Index";
@@ -226,6 +231,15 @@
 				559DD33C22514B4E00A2D483 /* CurrencyTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		5583231922515F8100D3A031 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5583231422515F0A00D3A031 /* calendar.png */,
+				5583231622515F4400D3A031 /* bars.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		DBB7A3BE4A1AC50026469182 /* Pods */ = {
@@ -354,6 +368,8 @@
 				557BE1B6224EAC9B008AA84B /* LaunchScreen.storyboard in Resources */,
 				557BE1B3224EAC9B008AA84B /* Assets.xcassets in Resources */,
 				557BE1B1224EAC99008AA84B /* Main.storyboard in Resources */,
+				5583231722515F4500D3A031 /* bars.png in Resources */,
+				5583231522515F0A00D3A031 /* calendar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +461,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeableTabBarController/SwipeableTabBarController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -456,6 +473,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeableTabBarController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

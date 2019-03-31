@@ -30,10 +30,8 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
     setupView()
     setupInitialObservers()
-
     self.setupLineChart()
   }
 
