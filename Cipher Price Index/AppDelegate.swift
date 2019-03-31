@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+
+    // Check if there is a default coin
+    let currency = UserDefaults.standard.string(forKey: "SelectedCurrency")
+    if  currency == nil {
+      print("Currency nil, setting default")
+      UserDefaults.standard.set("USD", forKey: "SelectedCurrency")
+    }
+
+
     return true
   }
 
