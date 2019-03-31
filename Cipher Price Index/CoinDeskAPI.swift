@@ -59,7 +59,6 @@ class CoinDeskAPI {
       dateFormaterISO.dateFormat = CoinDeskApiDateFormat.history.rawValue
       url += "&start=" + dateFormaterISO.string(from: startDate!)
       url += "&end=" + dateFormaterISO.string(from: endDate!)
-      print(url)
     }
 
     return CoinDeskAPI.getRequest(url: url) { (observer, response) in
@@ -115,62 +114,38 @@ class CoinDeskAPI {
 
 
   class func getCurrentPrice(currency:String = "USD") -> Observable<BitcoinPrice>{
+    let url = "\(baseUrl)/currentprice/\(currency)"
 
-    return Observable<BitcoinPrice>.create { observer in
+    return getRequest(url: url, success: {  (observer, response) in
+      if let data = response.data {
+        do {
+          let json = try JSON(data: data)
+          let coinBP = json["bpi"][currency]
+          let code = coinBP["code"].string!
+          let description = coinBP["description"].string!
+          let rate = coinBP["rate"].string!
+          let rateFloat = coinBP["rate_float"].floatValue
 
-      let request = Alamofire.request("\(baseUrl)/currentprice/\(currency)").responseJSON { response in
-
-
-        //Check the result from Alamofire's response and check if it's a success or a failure
-        switch response.result {
-        case .success:
-          if let data = response.data {
-            do {
-              let json = try JSON(data: data)
-              let coinBP = json["bpi"][currency]
-              let code = coinBP["code"].string!
-              let description = coinBP["description"].string!
-              let rate = coinBP["rate"].string!
-              let rateFloat = coinBP["rate_float"].floatValue
-
-              //Adding Date to object
-              let dateFormaterISO = DateFormatter()
-              dateFormaterISO.dateFormat = CoinDeskApiDateFormat.updatedISO.rawValue
-              guard let date = dateFormaterISO.date(from: json["time"]["updatedISO"].string!) else {
-                throw ApiError.internalServerError
-              }
-
-              let bitcoinPrice = BitcoinPrice.init(code: code,
-                                                   coinDescription: description,
-                                                   rate: rate,
-                                                   rate_float: Double.init(rateFloat),
-                                                   date: date)
-
-              observer.onNext(bitcoinPrice);
-              observer.onCompleted()
-            } catch {
-              observer.onError(error)
-            }
+          // Adding Date to object
+          let dateFormaterISO = DateFormatter()
+          dateFormaterISO.dateFormat = CoinDeskApiDateFormat.updatedISO.rawValue
+          guard let date = dateFormaterISO.date(from: json["time"]["updatedISO"].string!) else {
+            throw ApiError.internalServerError
           }
 
-        case .failure(let error):
-          switch response.response?.statusCode {
-          case 403:
-            observer.onError(ApiError.forbidden)
-          case 404:
-            observer.onError(ApiError.notFound)
-          case 500:
-            observer.onError(ApiError.internalServerError)
-          default:
-            observer.onError(error)
-          }
+          let bitcoinPrice = BitcoinPrice.init(code: code,
+                                               coinDescription: description,
+                                               rate: rate,
+                                               rate_float: Double.init(rateFloat),
+                                               date: date)
+          observer.onNext(bitcoinPrice);
+          observer.onCompleted()
+        } catch {
+          observer.onError(error)
         }
       }
 
-      return Disposables.create {
-        request.cancel()
-      }
-    }
+    })
   }
 
 
